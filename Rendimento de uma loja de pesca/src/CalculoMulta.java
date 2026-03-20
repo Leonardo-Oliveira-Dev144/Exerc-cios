@@ -6,17 +6,20 @@ public class CalculoMulta {
 
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("DIGITE QUANTOS KG DE PEIXE FORAM PESCADOS ");
+        System.out.println("DIGITE QUANTOS KG DE PEIXE FORAM PESCADOS:");
 
         double pesoPeixes = leitor.nextDouble();
-
+        double kilosExcedentes = pesoPeixes - 50;
         double multa = (pesoPeixes - 50) * 4;
 
-        double kilosExcedentes = pesoPeixes - 50;
-
-        System.out.println("PESO DA QUANTIDADE DE PEIXES PESCADOS: " + pesoPeixes + "kg");
-        System.out.println("QUILOS EXCEDENTES: " + kilosExcedentes + "kg");
-        System.out.println("MULTA À PAGAR: " + multa + " REAIS");
+        if (pesoPeixes > 50){
+            System.out.println("QUANTIDADE DE PEIXES PESCADOS: " + pesoPeixes + "kg");
+            System.out.println("KG EXCEDENTES: " + kilosExcedentes + "kg");
+            System.out.println("MULTA À PAGAR: " + multa + " REAIS");
+        }
+        else {
+            System.out.println("QUANTIDADE DE PEIXES PESCADOS: " + pesoPeixes + "kg");
+        }
 
         leitor.close();
 
