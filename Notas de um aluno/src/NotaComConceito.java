@@ -12,6 +12,7 @@ public class NotaComConceito {
         double nota2 = leitor.nextDouble();
         double media = (nota1 + nota2) / 2;
         String conceito = "";
+        String situacao = "";
 
         if (media > 9){
             conceito = "A";
@@ -23,7 +24,15 @@ public class NotaComConceito {
             conceito = "D";
         } else { conceito = "E";
         }
+
+        if (conceito == "A" || conceito == "B" || conceito == "C") {
+            situacao = "APROVADO";
+        } else {
+            situacao = "REPROVADO";
+        }
+
         System.out.println("A NOTA DO ALUNO É: " + conceito);
+        System.out.println("O ALUNO FOI: " + situacao);
 
     }
 
