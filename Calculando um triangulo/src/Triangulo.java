@@ -27,6 +27,9 @@ public class Triangulo {
             return;
         }
 
+        double semiPerimetro = (ladoA + ladoB + ladoC) / 2;
+        double areaTriangulo = Math.sqrt(semiPerimetro * (semiPerimetro - ladoA) * (semiPerimetro - ladoB) * (semiPerimetro - ladoC));
+
         if (ladoA == ladoB && ladoA == ladoC){
             condicaoTriangulo = "EQUILÁTERO";
         } else if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC){
@@ -36,8 +39,12 @@ public class Triangulo {
         }
 
         System.out.println("ESSE TRIÂNGULO É: " + condicaoTriangulo);
+        System.out.println("O SEMIPERÍMETRO DESSE TRIÂNGULO É: " + semiPerimetro);
+        System.out.println("A ÁREA DESSE TRIÂNGULO É: " + areaTriangulo);
+
 
         leitor.close();
+
     }
 
 
