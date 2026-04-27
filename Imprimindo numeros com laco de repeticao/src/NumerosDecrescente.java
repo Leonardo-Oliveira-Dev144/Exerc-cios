@@ -1,6 +1,6 @@
 public class NumerosDecrescente {
 
-    static void main(String[] args) {
+   public static void main(String[] args) {
 
         for (int i = 10; i >= 0; --i) {
 
