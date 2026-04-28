@@ -7,14 +7,18 @@ public class SomandoIndeterminadamente {
         Scanner leitor = new Scanner(System.in);
 
         int numero;
-        int soma;
+        int soma = 0;
         do {
             System.out.println("DIGITE UM NÚMERO(PARA ENCERRAR, DIGITE 0):");
             numero = leitor.nextInt();
-            soma = numero + numero;
+            if (numero != 0){
+                soma += numero;
+            }
+
+
 
         }while (numero != 0);
-        System.out.println("ESSES NÚMEROS SOMADOS SÃO IGUAIS A: " + soma);
+        System.out.println("ESSES NÚMEROS SOMADOS SÃO IGUAIS A: " + soma );
 
         leitor.close();
     }
