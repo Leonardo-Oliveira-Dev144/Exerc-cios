@@ -7,18 +7,31 @@ public class MaiorNumeroDigitado {
       Scanner leitor = new Scanner(System.in);
 
       int numero;
-      int maior = 0;
+      int maior;
 
-      do {
-          System.out.println("DIGITE UM NÚMERO (DIGITE 0 PARA PARAR):");
-          numero = leitor.nextInt();
+      System.out.println("DIGITE UM NÚMERO (0 PARA PARAR):");
+      numero = leitor.nextInt();
 
+      if (numero == 0){
+          System.out.println("NENHUM NÚMERO FOI DIGITADO.");
+          return;
+      } else {
+          maior = numero;
+      }
+
+      while (numero != 0){
           if (numero > maior){
               maior = numero;
           }
 
+          System.out.println("DIGITE UM NÚMERO (0 PARA PARAR):");
+          numero = leitor.nextInt();
 
-      }while (numero != 0);
+      }
+
+
+
+
 
       System.out.println("O MAIOR NÚMERO DIGITADO FOI: " + maior);
 
