@@ -35,7 +35,9 @@ public class RemoverDuplicados {
 
         for (int i = 0; i < numeros.length; i++) {
 
-            System.out.println(numeros[i]);
+            if (numeros[i] != 0){
+                System.out.println(numeros[i]);
+            }
 
         }
 
